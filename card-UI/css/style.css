@@ -1,0 +1,60 @@
+/* 초기화 */
+h1, h2, h3, h4, h5, h6, p, strong, ul, li, a{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(212, 212, 212);
+}
+
+.ally-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+.wrapper{
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.character{
+    box-shadow: 0px 0px 3px 1px red;
+    display: flex;
+    flex-direction: column;
+}
+
+.character img{
+    width: 100%;
+}
+
+h1{
+    margin: 20px auto;
+    text-align: center;
+}
+
+p{
+    font-size: 12px;
+    margin-bottom: 19px;
+}
+
+a{
+    font-size: 14px;
+}
+
+@media(max-width: 1080px){
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+    }
+}

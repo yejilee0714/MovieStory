@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+header,
+main {
+    margin: 100px;
+    position: relative;
+}
+
+header{
+    text-align: right;
+}
+
+h1{
+    margin-bottom: 15px;
+    font-size: 48px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    margin: 40px auto 20px;
+    font-size: 18px;
+}
+
+span, li{
+    line-height: 1.5;
+    font-size: 12px;
+}
+
+main ul, ol{
+    margin: 16px auto;
+    padding-left: 20px;
+    font-size: 14px;
+}
+tr, th, td{
+    font-size: 10px;
+}
+
+/* style */
+/* style - 전체, background */
+.wrapper {
+    margin: 150px auto;
+    width: 1360px;
+    border: 5px solid black;
+    position: relative;
+}
+
+.wrapper::before{
+    content: "";
+    background: url('../image/background.jpg');
+    opacity: 0.5;
+    position: absolute;
+    top: 0px;
+    left:0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+/* main */
+main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "image-area text-area";
+    margin: 100px 150px;
+}
+
+main .content-text{
+    width:390px;
+    padding: 30px 0px 30px 30px;
+    font-weight: bold;
+    grid-template-areas: "text-area";
+}
+
+main .content-image{
+    width:390px;
+    margin-left: 120px;
+    grid-template-areas: "image-area";
+}
+
+main .content-image img{
+    width: 100%;
+}
+
+main table{
+    text-align: center;
+    border: 5px solid gba(194, 194, 194, 0.945);
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.945);
+}
+
+th,
+td{
+    width: 120px;
+    padding: 8px 0px;
+}
+
+main table th{
+    background-color: rgba(255, 255, 255, 0.945);
+    border: 3px solid rgba(194, 194, 194, 0.945);
+}
+
+main table td{
+    border: 3px solid rgba(194, 194, 194, 0.945);
+}
+
+.zero{
+    border: none;
+    border-bottom: 3px solid rgba(194, 194, 194, 0.945);
+}
+
+tr:first-child .zero:last-of-type{
+    border-right: 3px solid rgba(194, 194, 194, 0.945);
+}
+
+footer{
+    position: relative;
+}
+
+footer ul{
+    list-style: none;
+    height: 20px;
+    padding: 20px;
+}
+
+footer li{
+    float: left;
+}
+
+footer li:first-child{
+    border-right: 3px solid;
+}
+
+footer a{
+    margin: auto 20px;
+}
+
+a:link{
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+a:hover{
+    color: rgb(165, 165, 165);
+}
+
+a:active{
+    background: rgb(255, 147, 147);
+}
+
+/* 미디어쿼리 */
+@media(max-width: 390px){
+    .wrapper {
+        margin: auto;
+        width: 390px;
+        /* border: 5px solid black; */
+        /* position: relative; */
+    }
+
+    main{
+        /* display: grid; */
+        /* grid-template-rows: repeat(2, 1fr); */
+        grid-template-areas: "image-area" "text-area";
+        margin: 100px auto;
+    }
+    
+    main .content-image{
+        /* width:390px; */
+        margin: 0px;
+        grid-template-areas: "image-area";
+    }
+
+    main .content-text{
+        /* width:390px; */
+        margin: 0px;
+        padding: 30px 0px 30px 30px;
+        font-weight: bold;
+        grid-template-areas: "text-area";
+    }
+}
